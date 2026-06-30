@@ -1,9 +1,19 @@
-import { useState } from 'react'
-import './App.css'
+import { Routes, Route } from 'react-router-dom'
+import Home from './Home'
+import Dashboard from './pages/Dashboard'
+import LoginPage from './pages/LoginPage'
+import RegisterPage from './pages/RegisterPage'
 
 function App() {
   return (
-    <h1>SpoilIQ</h1>
+    <>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/register' element={<RegisterPage />} />
+      </Routes>
+    </>
   )
 }
 

@@ -123,7 +123,7 @@ export async function login(req, res) {
     if (users.length === 0) {
       return res.status(401).json({
         success: false,
-        message: "Невірний email або пароль"
+        message: "Схоже, такого користувача не існує"
       });
     }
 
@@ -134,7 +134,7 @@ export async function login(req, res) {
     if (!isPasswordValid) {
       return res.status(401).json({
         success: false,
-        message: "Невірний email або пароль"
+        message: "Невірний пароль"
       });
     }
 
